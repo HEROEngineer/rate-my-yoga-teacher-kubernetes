@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rate-my-yoga-teacher-kubernetes
+  namespace: default
+  labels:
+    app: rate-my-yoga-teacher-kubernetes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rate-my-yoga-teacher-kubernetes
+  template:
+    metadata:
+      labels:
+        app: rate-my-yoga-teacher-kubernetes
+    spec:
+      containers:
+        - name: rate-my-yoga-teacher-kubernetes
+          image: registry.digitalocean.com/yogimaps-container-registry/yogi-nextjs
+          ports:
+            - containerPort: 3000
+              name: http

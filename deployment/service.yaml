@@ -1,0 +1,15 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: rate-my-yoga-teacher-kubernetes
+  namespace: default
+  labels:
+    app: rate-my-yoga-teacher-kubernetes
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3000
+      targetPort: 3000
+      name: http
+  selector:
+    app: rate-my-yoga-teacher-kubernetes
