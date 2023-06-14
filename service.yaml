@@ -6,10 +6,10 @@ metadata:
   labels:
     app: rate-my-yoga-teacher-kubernetes
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-    - port: 3000
+    - protocol: TCP
+      port: 4000
       targetPort: 3000
-      name: http
   selector:
     app: rate-my-yoga-teacher-kubernetes
