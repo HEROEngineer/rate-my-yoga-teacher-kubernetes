@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: rate-my-yoga-teacher-kubernetes
-          image: registry.digitalocean.com/yogimaps-container-registry/yogi-nextjs
+          image: registry.digitalocean.com/yogimaps-container-registry/yogi-nextjs:latest
           ports:
             - containerPort: 3000
               name: http
