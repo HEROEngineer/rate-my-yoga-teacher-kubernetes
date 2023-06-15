@@ -9,7 +9,7 @@ spec:
   type: LoadBalancer
   ports:
     - protocol: TCP
-      port: 443
+      port: 80
       targetPort: 3000
   selector:
     app: rate-my-yoga-teacher-kubernetes
